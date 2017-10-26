@@ -1,0 +1,67 @@
+﻿@model IEnumerable<HolidaysSite.Models.ImageModel.Image>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Фотографии с праздников</h2>
+<p>
+    @Html.ActionLink("Добавить", "Create", new { }, htmlAttributes: new { @class = "btn btn-primary", @style = "margin-bottom: 5px" })
+</p>
+<table class="gridtable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>Всего файлов</th>
+        <th style="text-align:center">Действия</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @if (item.FileServiceDetails.Count() == 0)
+            {
+                <span>Файлы отсутствуют</span>
+            }
+            else
+            {
+                <span>@item.FileServiceDetails.Count() Фото</span>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Изменить", "Edit", new { id = item.ImageId }) |
+            <a href="javascript:void(0);" data-id="@item.ImageId" class="deleteItem">Удалить</a>
+        </td>
+    </tr>
+    }
+</table>
+@section Scripts {
+
+    <script>
+        $('.deleteItem').click(function (e) {
+            e.preventDefault();
+            var $ctrl = $(this);
+            if (confirm('Вы уверены, что хотите удалить этот файл?')) {
+                $.ajax({
+                    url: '@Url.Action("Delete")',
+                    type: 'POST',
+                    data: { id: $(this).data('id') }
+                }).done(function (data) {
+                    if (data.Result == "OK") {
+                        $ctrl.closest('tr').remove();
+                    }
+                    else if (data.Result.Message) {
+                        alert(data.Result.Message);
+                    }
+                }).fail(function () {
+                        alert("Что-то пошло не так. Пожалуйста, попробуйте еще раз");
+                    })
+
+            }
+        });
+    </script>
+}

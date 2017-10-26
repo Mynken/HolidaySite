@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Happy Together</title>
+    <link rel="shortcut icon" href="~/Content/img/holiday.ico" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+</head>
+<body>
+    <div class="col-sm-12 col-md-12 col-lg-12 wraper">
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+        <div class="col-sm-10 col-md-10 col-lg-10 main_body">
+            <div class="container nav borderXwidth">
+                <img src="~/Content/img/header_background.png">
+                <a id="Button_zakaz1"><strong>Услуги</strong></a>
+                <a id="Button_zakaz2"><strong>Фото</strong></a>
+                <a id="Button_zakaz3"><strong>Контакты</strong></a>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 inside_body">
+                <div class="container_0">
+                    <img class="fon_1" src="~/Content/img/background_organization.jpg">
+                    @RenderBody()
+                </div>
+            </div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1"></div>
+            </div>  <!-- wraper -->
+
+            <div class="footer-wrap">
+                <!-- Footer starts -->
+                <div class="copyright"> © 2017 Happy Together, Все права защищены</div>
+                <div class="social-links">
+                    <a class="btn btn-social btn-lg btn-vk" target="_blank" href="https://vk.com/alya.shetelya"><span class="fa fa-vk"></span></a>
+                    <a class="btn btn-social btn-lg btn-facebook" target="_blank" href="https://www.facebook.com/groups/949671818462817/"><span class="fa fa-facebook"></span></a>
+                     @*<a class="btn btn-social btn-lg btn-instagram" target="_blank" href="https://instagram.com/BurjKhalifa"><span class="fa fa-instagram"></span></a>*@ 
+                </div>
+                <div class="developer">Разработчик © 2017 <a target="_blank" href="#">FutureSoftWare</a></div>
+            </div> <!-- Footer ends -->
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+</body>
+</html>

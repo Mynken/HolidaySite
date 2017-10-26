@@ -1,0 +1,40 @@
+﻿@model HolidaysSite.Models.ImageModel.Image
+@{
+    Layout = null;
+}
+
+@foreach (var image in Model.FileServiceDetails.Take(1))
+{
+
+    <p class="caption">
+        <span>
+            @Html.DisplayFor(modelItem => modelItem.Description) :
+        </span>
+    </p>
+
+}
+
+@foreach (var item in Model.FileServiceDetails)
+            {
+
+    <li tabindex="0"><a href="/HappyTogether/GetImage/?imageId=@item.Id"><img class="img_1" src="/HappyTogether/GetImage/?imageId=@item.Id"></a></li>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

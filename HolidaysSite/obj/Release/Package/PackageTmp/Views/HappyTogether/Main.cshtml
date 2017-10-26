@@ -1,0 +1,88 @@
+﻿@model IEnumerable<HolidaysSite.Models.ImageModel.Image>
+
+@{
+    ViewBag.Title = "Организация праздников";
+    Layout = "~/Views/Shared/_HolidayLayout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="main">
+    <div class="circle"></div>
+</div>
+       <h1 class="element"><em>ОРГАНИЗАЦИЯ ПРАЗДНИКОВ</em></h1>
+    <center>
+    <h2 style="text-align: center;"><em>Вас приветствует компания организации праздников!</em></h2>
+    <p style="text-align: center;">
+        <em>
+            Каждый день мы проводим по 3-4 анимации. Очень приятно получать позитивные отзывы клиентов и слова благодарности!
+            Теперь с нами работает талантливый фотограф.
+        </em>
+    </p>
+    <p style="text-align: center;">
+        <em>
+            300 грн/час и вот такие вот фото, вуаля =)
+        </em>
+    </p>
+    <hr class="hr_1">
+</center>
+    <center>
+        <h3 id="offers"><em>"Праздник под ключ" от Promotion Studio предоставляет:</em></h3>
+        <ul class="services">
+
+            <hr class="hr_2">
+            <li class="swing"><p>1.Аниматоры</p></li>
+            <li class="swing"><p>2.Ростовые куклы</p></li>
+            <li class="swing"><p>3.Шоу мыльных пузырей</p></li>
+            <li class="swing"><p>4.Химические шоу</p></li>
+            <li class="swing"><p>5.Квесты</p></li>
+            <li class="swing"><p>6.Аква-грим</p></li>
+            <li class="swing"><p>7.Фотограф</p></li>
+            <li class="swing"><p style="font-size: 22px;">8.Музыкальная аппаратура</p></li>
+            <li class="swing"><p>9.Ди-джей</p></li>
+            <li class="swing"><p>10.Корпоративы</p></li>
+            <li class="swing"><p>11.Свадьбы</p></li>
+            <hr class="hr_2">
+        </ul>
+    </center>
+
+
+</div>  <!-- container_0 -->
+
+    <div class="container_1">
+
+
+    <h3 id="gallery_photo"><em>Фотографии с праздников:</em></h3>
+
+        @foreach (var item in Model)
+        {
+            @Html.Action("PartialWork", "HappyTogether", new { id = item.ImageId })
+        }
+
+        <center>
+            <iframe style="margin-top: 50px 20% 0px 20%; width:854px; height:480px;"  src="https://www.youtube.com/embed/uVYZ6qTCmfo" frameborder="0" allowfullscreen></iframe>
+            </center>
+                <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                <script src="~/Scripts/gallery.js"></script>
+
+                <div class="contacts">
+                    <h3 id="contact"><em>Свяжитесь с нами:</em></h3>
+                    <center>
+                        <p><i><em>Киевстар</em></i><i class="i_2">+38 (045) 764-21-53</i></p>
+                        <p><i><em>MTS</em></i><i class="i_2">+38 (057) 754-30-52</i></p>
+                        <p><i><em>Life</em></i><i class="i_2">+38 (027) 754-26-74</i></p>
+                        <p><i class="vk_group"><em>Наша группа вконтакте:</em></i><a class="a_vk" href="https://vk.com/club117741786"><i class="fa fa-vk fa-3x" aria-hidden="true"></i></a></p>
+
+                        <div id="container" align="center">
+                            <button class="big-button" data-action="submit">
+                                Наверх
+                            </button>
+                        </div>
+                        <div class="shadow"></div>
+                        <script type="">
+                            $('.big-button').click(function () {
+                                $('html, body').animate({ scrollTop: 0 }, 1600);
+                                return false;
+                            })
+                        </script>
+
+                    </center>
+                </div>
