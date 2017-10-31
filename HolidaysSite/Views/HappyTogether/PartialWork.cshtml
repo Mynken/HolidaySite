@@ -17,24 +17,15 @@
 @foreach (var item in Model.FileServiceDetails)
             {
 
-    <li tabindex="0"><a href="/HappyTogether/GetImage/?imageId=@item.Id"><img class="img_1" src="/HappyTogether/GetImage/?imageId=@item.Id"></a></li>
+    <li class="item" tabindex="0">
+        <a href="/HappyTogether/GetImage/?imageId=@item.Id">
+            <!-- <img class="img_1" src="/HappyTogether/GetImage/?imageId=@item.Id">
+            <figure class="zoo-item" zoo-scale="2" zoo-image="/HappyTogether/GetImage/?imageId=@item.Id">...</figure>
+            -->
+            <img class="img_1" src="/HappyTogether/GetImage/?imageId=@item.Id">
+            <figure class="zoo-item" zoo-scale="2" zoo-image="/HappyTogether/GetImage/?imageId=@item.Id"></figure>
+        </a>
+    </li>
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -8,9 +8,9 @@
 <div class="main">
     <div class="circle"></div>
 </div>
-<h1 class="element"><em>ОРГАНИЗАЦИЯ ПРАЗДНИКОВ</em></h1>
+<h1 class="element"><em class="first_em">ОРГАНИЗАЦИЯ ПРАЗДНИКОВ</em></h1>
 <center>
-    <h2 style="text-align: center;"><em>Вас приветствует компания организации праздников!</em></h2>
+    <h2 style="text-align: center;"><em class="second_em">Вас приветствует компания организации праздников!</em></h2>
     <p style="text-align: center;">
         <em>
             Каждый день мы проводим по 3-4 анимации. Очень приятно получать позитивные отзывы клиентов и слова благодарности!
@@ -25,7 +25,7 @@
     <hr class="hr_1">
 </center>
 <center>
-    <h3 id="offers"><em>"Праздник под ключ" от Promotion Studio предоставляет:</em></h3>
+    <h3 id="offers"><em>Компания "Happy together" предлагает:</em></h3>
     <ul class="services">
 
         <hr class="hr_2">
@@ -59,6 +59,14 @@
             {
                 @Html.Action("PartialWork", "HappyTogether", new { id = item.ImageId })
             }
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="~/Scripts/zoom.min.js"></script>
+            <script>
+                $('.zoo-item').ZooMove({
+                    cursor: 'true',
+                    scale: '1.2',
+                });
+            </script>
         </ul>
         <div class="lightbox">
             <span class="cancel"><i class="fa fa-times" aria-hidden="true"></i></span>
@@ -82,14 +90,16 @@
     <div class="contacts">
         <h3 id="contact"><em>Свяжитесь с нами:</em></h3>
         <center>
-            <p><i><em>Киевстар</em></i><i class="i_2">+38 (045) 764-21-53</i></p>
-            <p><i><em>MTS</em></i><i class="i_2">+38 (057) 754-30-52</i></p>
-            <p><i><em>Life</em></i><i class="i_2">+38 (027) 754-26-74</i></p>
-            <p><i class="vk_group"><em>Наша группа вконтакте:</em></i><a class="a_vk" href="https://vk.com/club117741786"><i class="fa fa-vk fa-3x" aria-hidden="true"></i></a></p>
+            <p><i><em>Life</em></i><i class="i_2">+38 (063) 309-84-75</i></p>
+            <p><i><em>MTS</em></i><i class="i_2">+38 (066) 271-01-90</i></p>
+            <p class="contacts last_p"><i class="vk_group"><em>Наша группа <a class="vkontakte" href="https://vk.com/club117741786">Вконтакте</a></em></i></p>
+            <!--
+            <a class="a_vk" href="https://vk.com/club117741786"><i class="fa fa-vk fa-3x" aria-hidden="true"></i></a></p>  -->
 
-            <div id="container" align="center">
+            <div id="container">
                 <button class="big-button" data-action="submit">
-                    Наверх
+                    <!--  <i class="Phone is-animating"></i> -->
+                    <i class="fa fa-arrow-up"></i>
                 </button>
             </div>
             <div class="shadow"></div>
@@ -102,6 +112,7 @@
 
         </center>
     </div>
+
 
 
 
