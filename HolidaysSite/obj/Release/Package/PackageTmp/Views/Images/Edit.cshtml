@@ -37,14 +37,9 @@
                 {
                     <li>
                         <img class="img-thumbnail" width="200" height="200"
-                             src="/Images/GetImage/?imageId=@item.Id">
-                        @*<a class="title" href="/Images/Download/?p=@(item.Id + item.Extension)&d=@item.FileName">@item.FileName</a>*@
+                             src="/Images/GetImage/?imageId=@item.Id">                       
                         <a href="javascript:void(0);" data-id="@item.Id" class="deleteItem">X</a>
-                    </li>
-                    @*<li>
-                        <a class="title" href="/Support/Download/?p=@(item.Id + item.Extension)&d=@item.FileName">@item.FileName</a>
-                        <a href="javascript:void(0);" data-id="@item.Id" class="deleteItem">X</a>
-                    </li>*@
+                    </li>                  
                 }
             </ul>
         </div>

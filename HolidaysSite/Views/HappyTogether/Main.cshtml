@@ -4,116 +4,123 @@
     ViewBag.Title = "Организация праздников";
     Layout = "~/Views/Shared/_HolidayLayout.cshtml";
 }
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="main">
-    <div class="circle"></div>
-</div>
-<h1 class="element"><em class="first_em">ОРГАНИЗАЦИЯ ПРАЗДНИКОВ</em></h1>
-<center>
-    <h2 style="text-align: center;"><em class="second_em">Вас приветствует компания организации праздников!</em></h2>
-    <p style="text-align: center;">
-        <em>
-            Каждый день мы проводим по 3-4 анимации. Очень приятно получать позитивные отзывы клиентов и слова благодарности!
-            Теперь с нами работает талантливый фотограф.
-        </em>
-    </p>
-    <p style="text-align: center;">
-        <em>
-            300 грн/час и вот такие вот фото, вуаля =)
-        </em>
-    </p>
-    <hr class="hr_1">
-</center>
-<center>
-    <h3 id="offers"><em>Компания "Happy together" предлагает:</em></h3>
-    <ul class="services">
-
-        <hr class="hr_2">
-        <li class="swing"><p>1.Аниматоры</p></li>
-        <li class="swing"><p>2.Ростовые куклы</p></li>
-        <li class="swing"><p>3.Шоу мыльных пузырей</p></li>
-        <li class="swing"><p>4.Химические шоу</p></li>
-        <li class="swing"><p>5.Квесты</p></li>
-        <li class="swing"><p>6.Аква-грим</p></li>
-        <li class="swing"><p>7.Фотограф</p></li>
-        <li class="swing"><p>8.Музыкальная аппаратура</p></li>
-        <li class="swing"><p>9.Ди-джей</p></li>
-        <li class="swing"><p>10.Корпоративы</p></li>
-        <li class="swing"><p>11.Свадьбы</p></li>
-        <hr class="hr_2">
-    </ul>
-</center>
-
-
-</div>  <!-- container_0 -->
-
-<div class="container_1">
-
-
-    <h3 id="gallery_photo"><em>Фотографии с праздников:</em></h3>
-
-    <div class="gallery">
-        <ul class="img-list">
+    <div class="main">
+        <div class="circle"></div>
+    </div>
+    <h1 class="element"><em class="first_em">ОРГАНИЗАЦИЯ ПРАЗДНИКОВ</em></h1>
+        <center>
+            <h2 style="text-align: center">
+                <em class="second_em">
+                    Вас приветствует компания организации праздников!
+                </em>
+            </h2>
+            <p style="text-align: center;">
+                <em>
+                    Каждый день мы проводим по 3-4 анимации. Очень приятно получать позитивные отзывы клиентов и слова благодарности!
+                    Теперь с нами работает талантливый фотограф.
+                </em>
+            </p>
+            <p style="text-align: center">
+                <em>
+                    300 грн/час и вот такие вот фото, вуаля =)
+                </em>
+            </p>
+            <hr class="hr_1">
+        </center>
+    <center>
+        <h3 id="offers">
+            <em>Компания "Happy together" предлагает:</em>
+        </h3>
+        <ul class="services">
+            <li class="hr_2">
+                <li class="swing"><p>1.Аниматоры</p></li>
+                <li class="swing"><p>2.Ростовые куклы</p></li>
+                <li class="swing"><p>3.Шоу мыльных пузырей</p></li>
+                <li class="swing"><p>4.Химические шоу</p></li>
+                <li class="swing"><p>5.Квесты</p></li>
+                <li class="swing"><p>6.Аква-грим</p></li>
+                <li class="swing"><p>7.Фотограф</p></li>
+                <li class="swing"><p>8.Музыкальная аппаратура</p></li>
+                <li class="swing"><p>9.Ди-джей</p></li>
+                <li class="swing"><p>10.Корпоративы</p></li>
+                <li class="swing"><p>11.Свадьбы</p></li>
+            <li class="hr_2">
+        </ul>
+    </center>
+    <div class="container_1">
+        <h3 id="gallery_photo">
+            <em>Фотографии с праздников:</em>   
+        </h3>
+        <div class="gallery">
+            <ul class="img-list">
 
             @foreach (var item in Model)
             {
-                @Html.Action("PartialWork", "HappyTogether", new { id = item.ImageId })
-            }
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <script src="~/Scripts/zoom.min.js"></script>
-            <script>
-                $('.zoo-item').ZooMove({
-                    cursor: 'true',
-                    scale: '1.2',
-                });
-            </script>
-        </ul>
-        <div class="lightbox">
-            <span class="cancel"><i class="fa fa-times" aria-hidden="true"></i></span>
-            <div class="overlay"></div>
-            <figure>
-                <!--
-                                               <span class="prev"><i class="fa fa-angle-left" aria-hidden="true" align="center"></i></span>
-                                               <span class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                -->
-                <img src="#">
-            </figure>
-        </div><!-- //lightbox -->
-    </div>
-
-
-    <iframe style="" src="https://www.youtube.com/embed/uVYZ6qTCmfo" frameborder="0" allowfullscreen></iframe>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="~/Scripts/gallery.js"></script>
-
-    <div class="contacts">
-        <h3 id="contact"><em>Свяжитесь с нами:</em></h3>
-        <center>
-            <p><i><em>Life</em></i><i class="i_2">+38 (063) 309-84-75</i></p>
-            <p><i><em>MTS</em></i><i class="i_2">+38 (066) 271-01-90</i></p>
-            <p class="contacts last_p"><i class="vk_group"><em>Наша группа <a class="vkontakte" href="https://vk.com/club117741786">Вконтакте</a></em></i></p>
-            <!--
-            <a class="a_vk" href="https://vk.com/club117741786"><i class="fa fa-vk fa-3x" aria-hidden="true"></i></a></p>  -->
-
+                @Html.Action("PartialImage", "HappyTogether", new { id = item.ImageId })
+            }  
+                
+            </ul>
+            <div class="lightbox">
+                <span class="cancel">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+                <div class="overlay"></div>
+                <figure>               
+                    <img src="#">
+                </figure>
+            </div>
+        </div>
+    <iframe style="" src="https://www.youtube.com/embed/uVYZ6qTCmfo" frameborder="0" allowfullscreen></iframe>  
+        <div class="contacts">
+            <h3 id="contact">
+                <em>
+                    Свяжитесь с нами:
+                </em>
+            </h3>
+            <center>
+                <p><i><em>Life</em></i><i class="i_2">+38 (063) 309-84-75</i></p>
+                <p><i><em>MTS</em></i><i class="i_2">+38 (066) 271-01-90</i></p>
+                <p class="contacts last_p">
+                    <i class="vk_group">
+                        <em>
+                            Наша группа 
+                                <a class="vkontakte" href="https://vk.com/club117741786">
+                                    Вконтакте
+                                </a>
+                         </em>
+                    </i>
+                </p>
+        
             <div id="container">
-                <button class="big-button" data-action="submit">
-                    <!--  <i class="Phone is-animating"></i> -->
+                <button class="big-button" data-action="submit">                  
                     <i class="fa fa-arrow-up"></i>
                 </button>
             </div>
             <div class="shadow"></div>
-            <script type="">
-                $('.big-button').click(function () {
-                    $('html, body').animate({ scrollTop: 0 }, 1600);
-                    return false;
-                })
-            </script>
-
-        </center>
-    </div>
+            </center>
+        </div>
+   </div>
 
 
+@section Scripts {
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/zoom.min.js"></script>
+    <script src="~/Scripts/gallery.js"></script>
+    <script>
+        $('.zoo-item').ZooMove({
+            cursor: 'true',
+            scale: '1.2',
+        });
+    </script>
+    <script>
+         $('.big-button').click(function () {
+             $('html, body').animate({ scrollTop: 0 }, 1600);
+             return false;
+         })
+    </script>
+    }
 
 
 

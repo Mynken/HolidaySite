@@ -1,10 +1,7 @@
 ﻿using HolidaysSite.Models;
 using HolidaysSite.Models.ImageModel;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using System.IO;
@@ -14,12 +11,15 @@ namespace HolidaysSite.Controllers
     public class HappyTogetherController : Controller
     {
         private ImageContext db = new ImageContext();
-        // GET: Test
+
+        //Index
         public ActionResult Main()
         {
             return View(db.Images.ToList());
         }
-        public ActionResult PartialWork(int? id)
+
+        //Additional method for outputing images
+        public ActionResult PartialIMage(int? id)
         {
             if (id == null)
             {
@@ -33,6 +33,8 @@ namespace HolidaysSite.Controllers
             }
             return View(image);
         }
+
+        //Get images for holidays
         public ActionResult GetImage(string imageId)
         {
             if (imageId != null)

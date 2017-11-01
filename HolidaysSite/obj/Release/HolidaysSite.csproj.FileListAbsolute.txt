@@ -70,3 +70,10 @@ C:\Users\Waldes\documents\visual studio 2017\Projects\HolidaysSite\HolidaysSite\
 C:\Users\Waldes\documents\visual studio 2017\Projects\HolidaysSite\HolidaysSite\obj\Release\HolidaysSite.csproj.CoreCompileInputs.cache
 C:\Users\Waldes\documents\visual studio 2017\Projects\HolidaysSite\HolidaysSite\obj\Release\HolidaysSite.dll
 C:\Users\Waldes\documents\visual studio 2017\Projects\HolidaysSite\HolidaysSite\obj\Release\HolidaysSite.pdb
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\HolidaysSite\HolidaysSite\bin\MiniProfiler.dll
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\HolidaysSite\HolidaysSite\bin\MiniProfiler.EntityFramework6.dll
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\HolidaysSite\HolidaysSite\bin\MiniProfiler.pdb
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\HolidaysSite\HolidaysSite\bin\MiniProfiler.xml
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\HolidaysSite\HolidaysSite\bin\MiniProfiler.EntityFramework6.pdb
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\HolidaysSite\HolidaysSite\bin\MiniProfiler.EntityFramework6.xml
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\HolidaysSite\HolidaysSite\bin\MiniProfiler.EntityFramework6.dll.config
